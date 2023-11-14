@@ -1,0 +1,35 @@
+spring:
+  mvc:
+    static-path-pattern: /**
+  datasource:
+    username: root
+    password: 2586410714
+    url: jdbc:mysql://127.0.0.1:3306/jiarui?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8&useSSL=false&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+  data:
+    redis:
+      port: 6379
+      host: 192.168.10.80
+      database: 0
+      password: jiarui123.
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      table-prefix:
+server:
+  tomcat:
+    max-http-form-post-size: 20MB
+  port: 8080
+logging:
+  config: classpath:log4j2-dev.xml
+file:
+  management:
+    file-path: H:\JiaRui\JiaRuiERP
+    temp-folder-name: upload_temp
